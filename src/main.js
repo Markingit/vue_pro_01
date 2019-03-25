@@ -11,6 +11,10 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
+// import Vant from 'vant'
+// import 'vant/lib/index.css'
+
+// Vue.use(Vant)
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)

@@ -6,13 +6,13 @@ import store from "../store/index"
 import { Toast } from "vant"
 /** * 提示函数 * 禁止点击蒙层、显示一秒后关闭 */
 const tip = msg => {
-  Toast({ message: msg, duration: 1000, forbidClick: true });
+  Toast({ message: msg, duration: 1000, forbidClick: true })
 }
 /** * 跳转登录页 * 携带当前页面路由，以期在登录页面完成登录后返回当前页面 */
 
 const toLogin = () => {
   router.replace({
-    path: "/login",
+    // path: "/login",
     query: { redirect: router.currentRoute.fullPath }
   })
 }
@@ -78,8 +78,8 @@ instance.interceptors.response.use(
       // eg:请求超时或断网时，更新state的network状态
       // network状态在app.vue中控制着一个全局的断网提示组件的显示隐藏
       // 关于断网组件中的刷新重新获取数据，会在断网组件中说明
-      store.commit("changeNetwork", false)
+      //   store.commit("changeNetwork", false)
     }
   }
-);
+)
 export default instance
